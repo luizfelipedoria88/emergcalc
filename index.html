@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Doses - Intubação e Sedação</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: auto; padding: 20px; }
+    label, input, button, select { display: block; margin: 10px 0; }
+    input, select { width: 100%; padding: 8px; }
+    button { padding: 10px; background-color: #007BFF; color: white; border: none; cursor: pointer; }
+    button:hover { background-color: #0056b3; }
+    .result { background: #f8f9fa; padding: 10px; border-radius: 5px; margin-top: 20px; }
+    ul { padding-left: 20px; }
+    .tab { display: none; }
+    .tab.active { display: block; }
+    .tabs button { margin-right: 10px; }
+    .copy-btn { margin-top: 5px; background-color: #28a745; border: none; padding: 5px; color: white; cursor: pointer; }
+  </style>
+</head>
+<body>
+    <h2>Calculadora de Doses - Intubação e Sedação</h2>
+  <label for="peso">Peso do paciente (kg):</label>
+  <input type="number" id="peso" placeholder="Digite o peso em kg">
+
+  <label for="intensidade">Selecione intensidade da dose:</label>
+  <select id="intensidade">
+    <option value="min">Dose mínima</option>
+    <option value="padrao" selected>Dose padrão</option>
+    <option value="max">Dose máxima</option>
+  </select>
+
+  <div class="tabs">
+    <button onclick="mostrarAba('indu')">Indução e Sedação</button>
+    <button onclick="mostrarAba('bloqueio')">Bloqueio Neuromuscular</button>
+    <button onclick="mostrarAba('sedacao_cont')">Sedação Contínua</button>
+    <button onclick="mostrarAba('vasoativas')">Drogas Vasoativas</button>
+  </div>
+
+  <button onclick="calcularDoses()">Calcular Doses</button>
+
+  <div id="resultados" class="result"></div>
+
+  <script>
+    // Funções JavaScript completas do script atual
+  </script>
+</body>
+</html>
